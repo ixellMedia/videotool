@@ -20,17 +20,75 @@ iframe{
     height:100%;
     border:none;
 }
-</style>
+
+<style>
+html,body{
+    margin:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    overflow:hidden;
+}
+
+#container{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* Zone titre + chaîne */
+#bloc-titre{
+    position:absolute;
+    top:0;
+    left:0;
+    width:700px;
+    height:110px;
+    z-index:9999;
+
+    background:red;
+    opacity:0.5;
+
+}
+
+/* Zone Youtube */
+#bloc-youtube{
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:330px;
+    height:100px;
+    z-index:9999;
+
+    background:red;
+    opacity:0.5;
+
+}
+
 
 </head>
 
 <body>
 
-<iframe
-id="player"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
+
+<div id="container">
+
+    <iframe
+        id="player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+
+    <div id="bloc-titre"></div>
+    <div id="bloc-youtube"></div>
+
+</div>
+
 
 <script>
 
